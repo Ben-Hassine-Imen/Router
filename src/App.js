@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+import MoviesList from './components/MoviesList';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import SearchBox from './components/SearchBox';
+import Header from './components/Header';
+import {data} from './components/Data';
+import RatingIcon from './components/RatingIcon';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App=()=>{
+
+
+
+  const [movies, setmovies] = useState(data);
+
+
+    return (
+<div >
+  <Header/>
+<SearchBox />
+<RatingIcon/>
+      <div  className="container" style={{marginLeft:"200px"}}>
+
+        <MoviesList movies={movies}/>
+      
+   
     </div>
-  );
-}
+    </div>
+    )};
 
 export default App;
