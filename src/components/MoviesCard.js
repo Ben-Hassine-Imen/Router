@@ -1,5 +1,6 @@
 import Card from 'react-bootstrap/Card'
 import React from 'react'
+import StarRatingComponent from 'react-star-rating-component'
 function MoviesCard({movie}) {
     return(
         <div >
@@ -8,6 +9,7 @@ function MoviesCard({movie}) {
 
   <Card.Body   className="card-body">
     <Card.Title  className="card-title"> {movie.Title}</Card.Title>
+    <StarRatingComponent value={movie.rate}/>
     <Card.Text> {movie.Description}  </Card.Text>
 
   </Card.Body>

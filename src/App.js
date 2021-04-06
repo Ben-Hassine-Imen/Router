@@ -2,26 +2,41 @@ import './App.css';
 import React, {useState} from 'react';
 import MoviesList from './components/MoviesList';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SearchBox from './components/SearchBox';
+import Search from './components/Search';
 import Header from './components/Header';
 import {data} from './components/Data';
-import RatingIcon from './components/RatingIcon';
+import StarRatingComponent from 'react-star-rating-component'
+import AddMovie from './components/AddMovie';
 
 const App=()=>{
 
 
 
-  const [movies, setmovies] = useState(data);
+  const [movies, setMovies] = useState(data);
+  const [search, setSearch] = useState("");
+  const [newMovie, setNewMovie] = useState({
+Title:"",
+Poster:"",
+Description:"",
+    rate:"",
 
+  });
+  const Add=(newMovie)=>{
+    setMovies(
+      [...movies,newMovie]
+    )
+  }
+  const [rate,setRate] = React.useState(1)
 
     return (
 <div >
   <Header/>
-<SearchBox />
-<RatingIcon/>
+<Search  search ={search} setSearch={setSearch} setRate={setRate} />
+
+<AddMovie Add={Add} newMovie={newMovie} setNewMovie={setNewMovie}/>
       <div  className="container" style={{marginLeft:"200px"}}>
 
-        <MoviesList movies={movies}/>
+        <MoviesList movies={movies} setmovies={setMovies}  search ={search} setSearch={setSearch}  rate={rate}/>
       
    
     </div>
