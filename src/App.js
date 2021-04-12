@@ -1,17 +1,24 @@
+import { Route } from "react-router-dom";
+import React from 'react';
 import './App.css';
-import React, {useState} from 'react';
-import MoviesList from './components/MoviesList';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Search from './components/Search';
-import Header from './components/Header';
-import {data} from './components/Data';
-import StarRatingComponent from 'react-star-rating-component'
-import AddMovie from './components/AddMovie';
+import Home from './components/Home'
+import Trailer from './components/Trailer'
 
-const App=()=>{
+const App =()=>{
+  return (
+    <div>
+  
+
+ 
+         <Route  exact path="/"  component={Home}     />
+         <Route path="/Trailer/:id" component={Trailer}  />
+      
+      
+       
+       
 
 
-
+<<<<<<< HEAD
   const [movies, setMovies] = useState(data);
   const [search, setSearch] = useState("");
   const [newMovie, setNewMovie] = useState({
@@ -39,8 +46,11 @@ Description:"",
         <MoviesList movies={movies} setmovies={setMovies}  search ={search} setSearch={setSearch}  rate={rate}/>
       
 
-    </div>
-    </div>
-    )};
+=======
 
+ 
+>>>>>>> 7e6986597711c88cbdd4f4ddb306dd442363dca7
+    </div>
+);
+}
 export default App;
