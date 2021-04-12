@@ -10,7 +10,7 @@ function AddMovie({newMovie,setNewMovie,Add}) {
     return (
         <div>
               <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+        Add a movie
       </Button>
 
       <Modal show={show} onHide={handleClose}>
