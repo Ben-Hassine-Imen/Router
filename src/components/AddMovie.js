@@ -15,7 +15,7 @@ function AddMovie({newMovie,setNewMovie,Add}) {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Add a movie </Modal.Title>
         </Modal.Header>
         <Modal.Body><FormControl  type="text" 	placeholder='Title' className="mr-sm-2" name='Title' onChange={handleChange}/> 
         <FormControl  type="text" 	placeholder='Poster' className="mr-sm-2" name='Poster' onChange={handleChange}/>
