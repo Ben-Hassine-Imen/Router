@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card'
 import React from 'react'
 import StarRatingComponent from 'react-star-rating-component'
-function MoviesCard({movie}) {
+function MoviesCard({movie, id}) {
     return(
         <div >
 <Card style={{ width: '15rem' }}>

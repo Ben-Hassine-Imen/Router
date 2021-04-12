@@ -17,7 +17,7 @@ setSearch(e.target.value)
           type="text"
 
         />
-                <StarRatingComponent onStarClick={(nextValue, prevValue, name)=>setRate(nextValue)} />
+                <StarRatingComponent onStarClick={(nextValue)=>setRate(nextValue)} />
 
       </div>
     );

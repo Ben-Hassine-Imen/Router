@@ -26,7 +26,7 @@ Description:"",
       [...movies,newMovie]
     )
   }
-  const [rate,setRate] = React.useState(1)
+  const [rate,setRate] =useState(1)
 
     return (
 <div >
@@ -38,7 +38,7 @@ Description:"",
 
         <MoviesList movies={movies} setmovies={setMovies}  search ={search} setSearch={setSearch}  rate={rate}/>
       
-   
+
     </div>
     </div>
     )};
