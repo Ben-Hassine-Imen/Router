@@ -1,13 +1,10 @@
 import Card from 'react-bootstrap/Card'
 import React from 'react'
-import StarRatingComponent from 'react-star-rating-component'
-<<<<<<< HEAD
-function MoviesCard({movie, id}) {
-=======
 import { Link } from "react-router-dom";
+import StarRatingComponent from 'react-star-rating-component'
 
-function MoviesCard({movie,id}) {
->>>>>>> 7e6986597711c88cbdd4f4ddb306dd442363dca7
+function MoviesCard({movie, id}) {
+
     return(
         <div >
 <Card style={{ width: '15rem' }}>
